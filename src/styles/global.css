@@ -281,6 +281,26 @@ footer .copyright {
   border-color: var(--text-secondary);
 }
 
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: flex-start;
+}
+
+@media (min-width: 480px) {
+  .hero-cta-group {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+}
+
+.cta-helper-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
 /* Section specific styling helpers */
 .section-tag {
   font-size: 0.8rem;
