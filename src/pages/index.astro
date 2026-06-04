@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Matchmaking | Northeastern Student Event"
+  description="An independent student-run matchmaking event for Northeastern undergraduate students. Answer a few questions, get manually matched, and meet in person at an off-campus reveal night."
+>
+  <!-- Hero Section -->
+  <section class="hero-section" style="padding: var(--space-md) 0 var(--space-lg); gap: var(--space-sm);">
+    <h1 style="font-size: clamp(2.25rem, 8vw, 3.25rem); max-width: 15ch;">
+      Meet someone matched for you.
+    </h1>
+    
+    <p style="font-size: clamp(1rem, 4vw, 1.15rem); line-height: 1.5; margin-bottom: var(--space-xs); max-width: 54ch;">
+      A student-run matchmaking event for Northeastern undergraduate students. Answer a few questions, get manually matched, and meet everyone at an off-campus reveal night. $25 if selected.
+    </p>
+
+    <div>
+      <a href="#apply" class="btn btn-primary" style="max-width: max-content;">
+        Apply for the next event
+      </a>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" style="gap: var(--space-md);">
+    <h2 class="section-tag">How it works</h2>
+    
+    <ol class="steps-list">
+      <!-- Step 1 -->
+      <li class="step-card">
+        <span class="step-num">1</span>
+        <div class="step-content">
+          <h3 class="step-title">Apply</h3>
+          <p class="step-desc">
+            Answer a few questions about your music taste, your typical Sunday, what makes you laugh, and what you value. It takes about 4 minutes.
+          </p>
+        </div>
+      </li>
+
+      <!-- Step 2 -->
+      <li class="step-card">
+        <span class="step-num">2</span>
+        <div class="step-content">
+          <h3 class="step-title">Get matched</h3>
+          <p class="step-desc">
+            We read every single application manually. No black-box algorithms or endless swiping. If we find a compatible match, you're selected.
+          </p>
+        </div>
+      </li>
+
+      <!-- Step 3 -->
+      <li class="step-card">
+        <span class="step-num">3</span>
+        <div class="step-content">
+          <h3 class="step-title">Come to the event</h3>
+          <p class="step-desc">
+            Pay the $25 attendance fee only if selected. Meet your match in person at our off-campus reveal night and see who else was matched.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Trust & Details Section -->
+  <section id="details">
+    <h2 class="section-tag">The Details</h2>
+    
+    <div class="details-box">
+      <div class="details-grid">
+        <div class="details-item">
+          <!-- User / Student SVG Icon -->
+          <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <div class="details-text">
+            <strong>Student-run & independent.</strong> We're Northeastern students who got tired of standard dating apps and wanted a better, more human way to meet people. We're not affiliated with the university.
+          </div>
+        </div>
+
+        <div class="details-item">
+          <!-- Heart / Hand-crafted SVG Icon -->
+          <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <div class="details-text">
+            <strong>Manually selected matches.</strong> We don't use AI or generic scoring models. We read every response ourselves to look for real potential and shared vibes.
+          </div>
+        </div>
+
+        <div class="details-item">
+          <!-- Map Pin SVG Icon -->
+          <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <div class="details-text">
+            <strong>Off-campus reveal night.</strong> Hosted at a cozy, off-campus social space. It's a casual evening where matches are revealed—no formal pressure, just good music and conversations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Embed Section -->
+  <section id="apply" class="form-section">
+    <div style="margin-bottom: var(--space-md); display: flex; flex-direction: column; gap: var(--space-xs);">
+      <h2 style="font-size: 1.75rem;">Apply for the next drop</h2>
+      
+      <div class="pricing-disclosure">
+        <strong>Pricing disclosure:</strong> Applying is completely free. You only pay the $25 attendance fee if we find you a compatible match and you're selected to attend the reveal night.
+      </div>
+    </div>
+
+    <!-- Empty container placeholder for Tally.so embed -->
+    <div class="embed-placeholder">
+      <svg class="placeholder-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+        <path d="M12 8v8"/>
+        <path d="M8 12h8"/>
+      </svg>
+      <p style="font-weight: 600; color: var(--text-primary); margin-bottom: var(--space-xxs);">Tally.so Form Embed</p>
+      <p style="font-size: 0.8rem; max-width: 320px; margin: 0 auto var(--space-sm);">
+        This container is currently empty. You can paste your Tally.so or Typeform iframe/embed code here when you're ready.
+      </p>
+    </div>
+
+    <a href="#" id="fallback-apply-btn" class="btn btn-secondary" style="margin-top: var(--space-sm);">
+      Open application in new tab
+    </a>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <h2 class="section-tag">FAQ</h2>
+    
+    <div class="faq-list">
+      <details>
+        <summary>Who is this for?</summary>
+        <div class="faq-answer">
+          Any Northeastern undergraduate student looking for something genuine—whether romantic or just a really good connection. Open to all genders and orientations. Please note that this event is strictly for undergraduate students; graduate students are not eligible to apply.
+        </div>
+      </details>
+
+      <details>
+        <summary>How much does it cost?</summary>
+        <div class="faq-answer">
+          Applying is 100% free. If we find you a match and you're selected to attend the reveal night, it costs $25 to secure your ticket.
+        </div>
+      </details>
+
+      <details>
+        <summary>When do I pay?</summary>
+        <div class="faq-answer">
+          Only after we've reviewed applications and confirmed we have a curated match for you. We'll send you an invitation email with a link to confirm and pay. If you choose not to attend, you don't pay.
+        </div>
+      </details>
+
+      <details>
+        <summary>What kind of questions do you ask?</summary>
+        <div class="faq-answer">
+          Nothing clinical. We ask about your personality, your daily habits, what makes you laugh, and what you value. Just enough to get a real, human sense of who you are.
+        </div>
+      </details>
+
+      <details>
+        <summary>Where is the event?</summary>
+        <div class="faq-answer">
+          The reveal night is hosted at a warm, welcoming off-campus space near campus. The exact location is kept private and will be shared only with selected matches.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section id="final-cta" style="padding: var(--space-lg) 0; border-top: 1px solid var(--border-color); text-align: center; gap: var(--space-sm);">
+    <h2 style="font-size: 1.75rem;">Ready to find your match?</h2>
+    <p style="max-width: 42ch; margin: 0 auto var(--space-xs);">
+      Take 4 minutes to fill out the questionnaire. The next matchmaking drop is happening soon.
+    </p>
+    <div style="display: flex; justify-content: center;">
+      <a href="#apply" class="btn btn-primary" style="max-width: max-content;">
+        Apply for the next event
+      </a>
+    </div>
+  </section>
+</Layout>
