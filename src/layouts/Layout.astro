@@ -15,6 +15,10 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -48,11 +52,11 @@ import '../styles/global.css';
       </main>
 
       <footer>
-        <div class="text-center" style="display: flex; flex-direction: column; gap: var(--space-xs);">
-          <p style="font-size: 0.8rem; color: var(--text-tertiary);">
+        <div class="footer-content">
+          <p>
             Independent and student-run. Not affiliated with, sponsored by, or endorsed by Northeastern University.
           </p>
-          <p style="font-size: 0.75rem; color: var(--text-tertiary);">
+          <p class="copyright">
             &copy; {new Date().getFullYear()} Matchmaking. All rights reserved.
           </p>
         </div>

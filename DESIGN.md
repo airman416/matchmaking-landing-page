@@ -1,169 +1,71 @@
-# DESIGN.md
+# Design System: Matchmaking
 
-## Brand vibe
-Cool campus social drop.
-Intentional, minimal, warm, slightly exclusive, authentic.
-Should feel student-made but tasteful.
+Visual guidelines and tokens for the Northeastern Student Matchmaking landing page.
 
-Avoid:
-- corporate startup energy
-- luxury concierge tone
-- overly polished brand-theater
-- anything clinical or scammy-feeling
+## Creative North Star
+*“The Physical Flyer”* — A design that feels like a beautifully typeset, printed piece of paper on a warm campus bulletin board. It is tactile, editorial, and human, rejecting the clinical, dynamic shapes of standard web software.
 
-## Audience
-Northeastern students, mostly ages 18 to 24.
-Fast-scrolling, mobile-first, socially tuned-in users.
-They notice forced branding and fake exclusivity quickly.
+## Design Tokens
 
-## Emotional goal
-The page should feel:
-- real
-- current
-- easy to trust
-- socially interesting
-- low-pressure
+### Colors
 
-A visitor should think:
-"oh, this is actually kind of cool"
-not
-"what is this startup trying to sell me?"
+We use a responsive, warm color palette that supports both a clean daylight mode and a cozy midnight cafe mode.
 
-## Tone
-Conversational, clear, and lightly playful.
-Confident without sounding formal.
-Selective without sounding elitist.
-Transparent without sounding defensive.
+| Token Name | Light Mode Value (Daylight) | Dark Mode Value (Midnight) | Semantic Usage |
+| :--- | :--- | :--- | :--- |
+| `--bg-color` | `hsl(38, 25%, 97%)` (Cream) | `hsl(38, 12%, 10%)` (Charcoal) | Main page background |
+| `--text-primary` | `hsl(180, 4%, 12%)` (Charcoal) | `hsl(38, 20%, 94%)` (Warm white) | Headings and high-contrast body text |
+| `--text-secondary` | `hsl(30, 4%, 42%)` (Muted brown) | `hsl(38, 8%, 70%)` (Muted grey) | Paragraphs and secondary details |
+| `--text-tertiary` | `hsl(30, 3%, 55%)` (Muted slate) | `hsl(38, 5%, 52%)` (Slate grey) | Footnotes, captions, and placeholders |
+| `--accent-color` | `hsl(140, 20%, 25%)` (Forest Green) | `hsl(140, 18%, 42%)` (Bright Forest) | Primary CTAs, highlights, list markers |
+| `--accent-hover` | `hsl(140, 20%, 18%)` | `hsl(140, 18%, 48%)` | CTA hover states |
+| `--accent-light` | `hsl(140, 15%, 93%)` | `hsl(140, 15%, 15%)` | Badge background and soft highlights |
+| `--card-bg` | `hsl(38, 20%, 94%)` (Soft cream) | `hsl(38, 10%, 14%)` (Deep charcoal) | Card background contrast |
+| `--border-color` | `hsl(30, 8%, 88%)` (Warm grey border) | `hsl(38, 8%, 20%)` (Dark grey border) | Subtle dividers and card borders |
 
-## Color system
-Background: warm off-white or soft cream
-Primary text: charcoal / near-black
-Secondary text: muted gray-brown or soft slate
-Accent: one muted accent only
+### Typography
 
-Good accent directions:
-- deep forest green
-- muted burgundy
-- slate blue
-- dark olive
+- **Display Font**: `Cormorant Garamond` (Google Fonts) — an elegant, editorial, and lightweight serif with gorgeous italics.
+  - Used for: Brand logo, page titles, section tags, step numbers.
+  - Vibe: Intimate, physical, student-editorial.
+- **Body Font**: `Instrument Sans` (Google Fonts) — a highly refined, clean sans-serif with a premium character.
+  - Used for: Paragraphs, button text, FAQ answers, labels.
+  - Vibe: Modern, extremely readable, highly credible.
 
-Use color sparingly.
-The page should mostly rely on typography, spacing, and layout.
+### Spacing & Layout
 
-## Typography
-Display font: elegant, youthful, lightly editorial
-Body font: clean sans-serif with strong readability on mobile
+- **Max Width**: `640px` (mobile-first reading column). Scales up to `860px` for multi-column details on larger screens.
+- **Spacing System**:
+  - `--space-xxs`: `0.25rem`
+  - `--space-xs`: `0.5rem`
+  - `--space-sm`: `1rem`
+  - `--space-md`: `1.5rem`
+  - `--space-lg`: `2.5rem`
+  - `--space-xl`: `4rem`
 
-Typography should feel:
-- modern
-- calm
-- a little elevated
-- not corporate
-- not gimmicky
+---
 
-Avoid fonts that feel:
-- gothic
-- tech-bro startup
-- luxury fashion parody
-- playful in a childish way
+## Component Guidelines
 
-## Layout
-Single-page landing page.
-Minimal nav or no nav.
-One primary CTA.
-Short sections only.
-Generous spacing.
-Strong vertical rhythm.
+### Buttons
+- **Primary CTA**: Solid background (`--accent-color`), high-contrast text (`#ffffff` or `--bg-color` in dark mode). Simple rectangular outline with slight rounding (`--radius-md: 8px`).
+- **Secondary CTA**: Transparent background, border (`--border-color`), transition on background on hover.
+- **Interaction**: Slight vertical translate (`translateY(-1px)`) and a soft, low-intensity box shadow on hover. No dramatic transitions.
 
-Recommended section order:
-1. Hero
-2. How it works
-3. Small details / trust section
-4. Embedded form
-5. FAQ
-6. Final CTA
+### Cards & Spacing
+- Cards (e.g. steps, details) should use a flat background (`--card-bg`) with a thin border (`--border-color`).
+- Steps should feel like stacked, physical polaroids or printed paper tags. Include a subtle lift on hover to invite interaction.
+- Add an optional organic paper-grain texture via a soft blend-mode gradient to enhance the "printed flyer" aesthetic.
 
-## Hero direction
-The hero should immediately explain the offer.
-Use one clear headline, one short subheadline, and one CTA.
+### FAQ Accordion
+- Styled using native `<details>` and `<summary>` elements.
+- Clean borders below each item. Smooth rotation or symbol change (+ to −) on expand.
+- Brief answers only, typeset with `text-wrap: pretty`.
 
-Do not use abstract lines like:
-- beyond silence, we build the eternal
-- find your destiny
-- enter the experience
+---
 
-The hero should say what it is.
-
-## Components
-Buttons:
-- solid, simple, obvious
-- rounded but not bubbly
-- strong contrast
-- small hover feedback only
-
-Cards:
-- subtle borders
-- light background contrast
-- no glassmorphism
-- no excessive shadows
-
-FAQ:
-- short accordion or short stacked blocks
-- answer only real questions
-- keep answers brief
-
-Form section:
-- should feel integrated into the page
-- add strong heading above the embed
-- include fallback “open in new tab” link
-
-## Imagery
-If using imagery or video, keep it subtle.
-It should support the mood, not distract from the message.
-
-Good options:
-- soft grain
-- blurred social scene
-- moody campus-adjacent visual
-- tasteful motion texture
-
-Avoid:
-- obvious stock photos
-- people fake-laughing
-- dating-app clichés
-- hearts, roses, or cheesy romance graphics
-
-## Motion
-Subtle only.
-Use light fade-ins, soft hover states, and smooth scrolling.
-No dramatic motion.
-No flashy animation choreography.
-
-## Copy presentation
-Short paragraphs.
-Short labels.
-No walls of text.
-The page should feel skimmable in under 15 seconds.
-
-Copy should feel natural and high-signal.
-If a sentence sounds like brand theater, cut it.
-
-## Trust strategy
-Build trust through clarity:
-- explain who it is for
-- explain how it works
-- explain when payment happens
-- explain what happens after applying
-
-Do not rely on fake testimonials, fake counters, or fake scarcity.
-
-## Anti-patterns
-Do not generate:
-- generic SaaS landing pages
-- luxury concierge websites
-- over-designed startup hero sections
-- big multi-link navbars
-- filler feature grids
-- fake social proof
-- “as seen in” sections
-- vague poetic copy
+## Motion & Transitions
+- Keep motion subtle and physical.
+- Use a single, premium easing function: `cubic-bezier(0.16, 1, 0.3, 1)` (ease-out-expo) for entry transitions.
+- Fade-in animation on page load (`800ms`) to soften page entry.
+- Hover transition speeds: `0.15s ease` for interactive buttons, `0.25s ease` for card transitions.
